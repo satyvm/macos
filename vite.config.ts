@@ -15,6 +15,7 @@ export default defineConfig({
       dirs: ["src/hooks", "src/stores", "src/components/**"]
     })
   ],
+  base: '/macos/',
   resolve: {
     alias: {
       "~/": `${path.resolve(__dirname, "src")}/`
