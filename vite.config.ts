@@ -12,13 +12,12 @@ export default defineConfig({
     autoImport({
       imports: ["react"],
       dts: "src/auto-imports.d.ts",
-      dirs: ["src/hooks", "src/stores", "src/components/**"]
-    })
+      dirs: ["src/hooks", "src/stores", "src/components/**"],
+    }),
   ],
-  base: '/macos/',
   resolve: {
     alias: {
-      "~/": `${path.resolve(__dirname, "src")}/`
-    }
-  }
+      "~/": `${path.resolve(__dirname, "src")}/`,
+    },
+  },
 });
