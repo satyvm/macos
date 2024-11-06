@@ -5,9 +5,6 @@ node_modules/
 .pnp.cjs
 .pnp.loader.mjs
 
-# Lockfiles (pnpm)
-pnpm-lock.yaml
-
 # Build directories
 dist/
 build/
