@@ -1,5 +1,86 @@
-*.log
-.DS_Store
-.cache/
+# Node modules and pnpm artifacts
 node_modules/
+.pnpm/
+.pnpm-debug.log*
+.pnp.cjs
+.pnp.loader.mjs
+
+# Lockfiles (pnpm)
+pnpm-lock.yaml
+
+# Build directories
 dist/
+build/
+out/
+temp/
+.temp/
+.cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+jspm_packages/
+.eslintcache
+.stylelintcache
+.sass-cache/
+
+# Testing directories and reports
+coverage/
+.nyc_output/
+jest/
+__tests__/
+*.snap
+
+# Environment variable files
+.env
+.env.*.local
+
+# Next.js
+.next/
+
+# Nuxt.js
+.nuxt/
+.nuxt-dist/
+
+# SvelteKit
+.svelte-kit/
+
+# Vite
+.vite/
+*.vite
+.vite-cache/
+
+# Vue.js
+.vuepress/
+.vuepress/dist/
+
+# Parcel
+.cache/
+dist/
+
+# Storybook files
+.storybook/
+storybook-static/
+
+# Git ignored local editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Static site generator files
+.cache/
+
+# Miscellaneous
+*.swp
+*.lock
+
+# macOS and Windows system files
+*.DS_Store
+Thumbs.db
