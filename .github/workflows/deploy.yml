@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Run this workflow on pushes to the `main` branch
+      - main # Run this workflow on pushes to the `main` branch
 
 permissions:
   contents: read
@@ -20,22 +20,23 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'           # Use a specific Node version
-          cache: 'pnpm'
+          node-version: "22"
+          cache: "pnpm"
 
       - name: Install pnpm
-        run: |
-          npm install -g pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
         run: pnpm install
+        shell: bash
 
       - name: Build the project
         run: pnpm run build
+        shell: bash
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist        # Directory containing the built files
-          publish_branch: gh-pages   # Target branch for GitHub Pages deployment
+          publish_dir: ./dist
+          publish_branch: gh-pages
