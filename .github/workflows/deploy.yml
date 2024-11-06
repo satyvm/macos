@@ -16,15 +16,15 @@ jobs:
       NODE_VERSION: 20
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout
         with:
           fetch-depth: 0
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
@@ -36,7 +36,7 @@ jobs:
         run: pnpm build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
